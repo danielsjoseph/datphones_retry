@@ -1,0 +1,47 @@
+.videos{
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    height: fit-content;
+    height: 100vh;
+    width: 100%;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+.videos::-webkit-scrollbar{
+    display: none;
+}
+.video1{
+    width: 100%;
+    position: relative;
+    scroll-snap-align: start;
+    height: 100vh;
+    overflow: hidden;
+    /* transition: 2s ease-in; */
+}
+.video1 video{
+    height: 100vh;
+    width: 100%;
+    
+}
+.vid_logo{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    gap:8px;
+    display: flex;
+    justify-content: center;
+}
+
+.bg_blur{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    filter: blur(70px);
+}
+

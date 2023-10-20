@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/video_review.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datphones</title>
+</head>
+<body>
+    <!-- <button onclick="window.scrollBy(0,500)">Next</button> -->
+    <div class="videos" id="videos">
+        <div class="video1" id="video1">
+            <video controls controlsList="nodownload" onended="videos.scrollBy(0,window.innerHeight)">
+                <source src="../static/img/review1.mp4">
+            </video>
+            <div class="vid_logo">
+                <div><a href="./index.html#reviews"><img src="../static/img/cancel.png" alt="" srcset="" width="12px" height="12px"></a></div>
+                <div>Datphones</div>
+            </div>
+        
+            <div class="bg_blur" style="background-image: url(../../templates/review1bg.png);">
+                
+            </div>
+        </div>
+        <div class="video1" id="video2">
+            <video controls controlsList="nodownload" onended="videos.scrollBy(0,window.innerHeight)">
+                <source src="../static/img/review2.mp4">
+            </video>
+            <div class="vid_logo">
+                <div><a href="./index.html#reviews"><img src="../static/img/cancel.png" alt="" srcset="" width="12px" height="12px"></a></div>
+                <div>Datphones</div>
+            </div>
+        
+            <div class="bg_blur" style="background-image: url(../../templates/review2bg.png);">
+                
+            </div>
+        </div>
+        <div class="video1" id="video1">
+            <video controls controlsList="nodownload">
+                <source src="../static/img/review1.mp4">
+            </video>
+            <div class="vid_logo">
+                <div><a href="./index.html#reviews"><img src="../static/img/cancel.png" alt="" srcset="" width="12px" height="12px"></a></div>
+                <div>Datphones</div>
+            </div>
+        
+            <div class="bg_blur" style="background-image: url(../../templates/review1bg.png);">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        function playPauseVideo() {
+    let videos = document.querySelectorAll("video");
+    videos.forEach((video) => {
+        // We can only control playback without insteraction if video is mute
+        video.muted = true;
+        // Play is a promise so we need to check we have it
+        let playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.then((_) => {
+                let observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (
+                                entry.intersectionRatio !== 1 &&
+                                !video.paused
+                            ) {
+                                video.pause();
+                            } 
+                            else if (entry.intersectionRatio == 1 &&
+                                video.paused) {
+                                video.play();
+                            }
+                            // else if(video.onended){
+                            //     alert("JOE")
+                            // }
+
+                        });
+                    },
+                    { threshold: 1 }
+                );
+                observer.observe(video);
+            });
+        }
+    });
+}
+
+// And you would kick this off where appropriate with:
+playPauseVideo();
+    </script>
+</body>
+</html>
