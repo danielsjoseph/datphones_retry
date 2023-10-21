@@ -4,7 +4,7 @@
     margin: 0;
     font-family: sans-serif;
     scroll-behavior: smooth;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 ul {
@@ -84,10 +84,8 @@ ul {
     /* width: 400px; */
     /* background-color: blue; */
     /* width: 100px; */
-    /* height: 12em; */
-    /* width: 10em; */
-    height: 10%;
-    width: 30%;
+    height: 12em;
+    width: 10em;
   }
 .browse_section_image{
   display: flex;
@@ -95,8 +93,8 @@ ul {
   align-items: center;
 }
 .browse_section_item img{
-  height: 100%;
-  width:100%;
+  height: 10em;
+  width:10em;
   object-fit: contain;
 }
 .most_searched{
@@ -120,7 +118,7 @@ ul {
 .most_searched_item{
   scroll-snap-align: start;
   width: 10em;
-  height: 15em;
+  height: 17em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,11 +160,11 @@ ul {
 .play{
   position: absolute;
   background-color: blue;
-  height: 50px;width: 50px;
+  height:3em;width:3em;
   border-radius: 50%;
   top:50%;
   left: 50%;
-  transform: translate(-25px,-25px);
+  transform: translate(-1.5em,-1.5em);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,11 +177,15 @@ ul {
 .trusted{
   display: grid;
   grid-template-columns: 30em 30em;
-  grid-template-rows: 120px 120px;
-  gap: 4px;
+  grid-template-rows: 8em 8em;
+  gap: 2em;
   overflow-x: auto;
-  justify-content: space-around;
-  margin-bottom: 100px;
+  overflow-y: hidden;
+  /* justify-content: space-around; */
+  justify-content: space-between;
+  margin-bottom: 5em;
+  padding-right: 2.5em;
+  padding-left: 2.5em;
 }
 .trusted_item{
   /* background-color: Red; */
@@ -191,8 +193,8 @@ ul {
   border: 1px solid grey;
   border-radius: 8px;
   display: grid;
-  grid-template-columns: 30% 70%;
-  grid-template-rows:20% 80%;
+  grid-template-columns: 8em 22em;
+  grid-template-rows:1em 7em;
 }
 .trusted_item_3{
   /* background-color: red; */
@@ -200,28 +202,31 @@ ul {
   grid-column-end: 3;
 }
 .trusted_item img{
-  width: 80%;
-  height: 80%;
+  width: 6em;
+  height: 6em;
   object-fit: contain;
 }
 .trusted_item_1{
-  grid-row-start: 1;
-  grid-row-end: 3;
+  /* grid-row-start: 1; */
+  /* grid-row-end: 3; */
+  width: 8em;
+  height: 7em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .typed_reviews_section{
   display: flex;
-  gap: 4px;
+  gap: 0.5em;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 .typed_reviews_item{
-  border: 1px solid grey;
-  height: 370px;
-  width: 250px;
-  /* background: blue; */
+  border: 0.01em solid grey;
+  height: 22em;
+  width: 15em;
   padding: 8px;
+  border-radius: 0.3em;
 }
 .product,.comment,.pictures{
   /* height: 100px; */
@@ -231,25 +236,28 @@ ul {
   /* margin-bottom: 32px; */
 }
 .product{
-  height: 120px;
+  height: 7em;
 }
 .comment{
   text-align: center;
+  height: 7em;
+  overflow: hidden;
   /* height: 160px; */
 }
 .stars{
   display: flex;
-  gap: 2px;
+  gap: 1px;
 }
 .pictures{
   flex-direction: row;
   position: relative;
   gap: 4px;
+  height: 5em;
 }
 .pictures img{
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
+  width: 4em;
+  height: 4em;
+  object-fit: contain;
 }
 .pictures button{
   position: absolute;
@@ -261,14 +269,18 @@ ul {
   display: flex; 
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: 2.5em;
+  
+  /* background-color: blue; */
 }
 .about_us{
-  display: grid;
-  grid-template-columns: 50% 20% 20%;
+  display: flex;
+  justify-content:space-between;
   padding: 8px;
   gap: 5%;
-  overflow: initial;
+  flex-wrap: wrap;
+  /* overflow: initial; */
+  background-color: blue;
   /* overflow-x: auto; */
 }
 .following{
@@ -280,3 +292,10 @@ ul {
 .buttons{
   display: flex;
 }
+.about_datphones{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
