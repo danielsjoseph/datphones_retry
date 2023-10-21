@@ -14,12 +14,12 @@
     width: 100%;
     position: relative;
     scroll-snap-align: start;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     /* transition: 2s ease-in; */
 }
 .video1 video{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     
 }
