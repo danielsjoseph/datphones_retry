@@ -132,16 +132,18 @@
 <div>WELCOME TO DATSPHONESNG. YOUR TRUSTED CONNECTION TO RELIABLE, CERTIFIED PRE-OWNED DEVICES.</div>
 <div class="trusted">
     <div class="trusted_item">
+        <!-- <div>hi</div> -->
         <div class="trusted_item_1"><img src="../static/img/shipping.avif" alt=""></div>
         <div>Get your devices FAST.</div>
         <div class="trusted_item_3">3</div>
+        <!-- <div></div> -->
     </div>
     <div class="trusted_item">
         <div class="trusted_item_1"><img src="../static/img/badge.avif" alt=""></div>
 
         <div>Worry-free experience.</div>
         <div class="trusted_item_3">3</div>
-    
+        <!-- <div></div> -->
     </div>
     <div class="trusted_item">
         <div class="trusted_item_1"><img src="../static/img/calender.avif" alt=""></div>
@@ -237,11 +239,70 @@
                 Firstname Lastname
             </div>
         </div>
+        <div class="typed_reviews_item">
+            <div class="product">
+                <p><img src="../static/img/accessories.avif" alt="" width="40px" height="40px" style="object-fit: contain;border: 1px solid grey; border-radius: 4px;"></p>
+                <p>Accessories</p>
+                <div class="stars">
+                    <div id="star1"></div>
+                    <div id="star2"></div>
+                    <div id="star3"></div>
+                    <div id="star4"></div>
+                    <div id="star5"></div>
+
+                </div>
+                <div id="rating">1.3</div>
+            </div>
+            <div class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum soluta nihil a eos, esse fuga nam, quaerat odio <a href="#" style="text-decoration: none; color: black;"><u>read more</u></a><div class="date">DATE</div></div>
+            
+            <div class="pictures">
+                <img src="../static/img/androids.avif" alt="">
+                <img src="../static/img/androids.avif" alt="">
+                <button>+ 2 More</button>
+            </div>
+            <div class="user">
+                Firstname Lastname
+            </div>
+        </div>
+        <div class="typed_reviews_item">
+            <div class="product">
+                <p><img src="../static/img/accessories.avif" alt="" width="40px" height="40px" style="object-fit: contain;border: 1px solid grey; border-radius: 4px;"></p>
+                <p>Accessories</p>
+                <div class="stars">
+                    <div id="star1"></div>
+                    <div id="star2"></div>
+                    <div id="star3"></div>
+                    <div id="star4"></div>
+                    <div id="star5"></div>
+
+                </div>
+                <div id="rating">1.3</div>
+            </div>
+            <div class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum soluta nihil a eos, esse fuga nam, quaerat odio <a href="#" style="text-decoration: none; color: black;"><u>read more</u></a><div class="date">DATE</div></div>
+            
+            <div class="pictures">
+                <img src="../static/img/androids.avif" alt="">
+                <img src="../static/img/androids.avif" alt="">
+                <button>+ 2 More</button>
+            </div>
+            <div class="user">
+                Firstname Lastname
+            </div>
+        </div>
     </div>
 </div>
 
+<div class="about_datphones">
+    <div>ABOUT DATPHONES</div>
+    <div class="view_all" style="display: flex; cursor: pointer;">
+        <div style="width: fit-content;background-color: #fff;">View all&nbsp;</div>
+        <div><iconify-icon icon="mingcute:arrow-right-fill" width="1em"></iconify-icon></div>
+    </div>
+
+</div>
+
 <div class="about_us">
-    <div>
+    <div style="width: 30em;">
         <div>About DATPHONESNG</div>
         <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, debitis sunt! Nam, illo doloribus error harum quisquam exercitationem in et hic sit eveniet consequatur laborum mollitia excepturi modi quo minus?</div>
     </div>
@@ -273,6 +334,9 @@
         </div>
     </div>
 </div>
+
+
+
 <script>
     // alert("height is:"+window.innerHeight+"width is:"+innerWidth)
     star1 = document.getElementById("star1");
@@ -283,9 +347,9 @@
     rating = document.getElementById("rating")
     rating = parseFloat(rating.innerText)
     
-    star = '<img src="../static/img/star.png" width="14px" height="14px">'
-    half = '<img src="../static/img/halfgold.png" width="14px" height="14px">'
-    starred = '<img src="../static/img/goldstar.png" width="14px" height="14px">'
+    star = '<iconify-icon icon="ph:star" width="1em"></iconify-icon>'
+    half = '<img src="../static/img/halfgold.png" style="height:0.85em;width:0.85em">'
+    starred = '<iconify-icon icon="ic:round-star" width="1.1em" style="color:gold"></iconify-icon>'
 
     if(rating==1){
         star1.innerHTML=starred
