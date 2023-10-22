@@ -22,5 +22,5 @@ video{
     /* background-color: blue; */
     height: 100%;
     width: 100%;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
