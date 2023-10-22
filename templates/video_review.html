@@ -8,50 +8,21 @@
     <title>Datphones</title>
 </head>
 <body>
-    <!-- <button onclick="window.scrollBy(0,500)">Next</button> -->
-    <div class="videos" id="videos">
-        <div class="video1" id="video1">
-            <video controls controlsList="nodownload" onended="videos.scrollBy(0,window.innerHeight)">
-                <source src="../static/img/review1.mp4">
-            </video>
-            <div class="vid_logo">
-                <div><a href="./index.html#reviews"><img src="../static/img/cancel.png" alt="" srcset="" width="12px" height="12px"></a></div>
-                <div>Datphones</div>
-            </div>
-        
-            <div class="bg_blur" style="background-image: url(../../templates/review1bg.png);">
-                
-            </div>
-        </div>
-        <div class="video1" id="video2">
-            <video controls controlsList="nodownload" onended="videos.scrollBy(0,window.innerHeight)">
-                <source src="../static/img/review2.mp4">
-            </video>
-            <div class="vid_logo">
-                <div><a href="./index.html#reviews"><img src="../static/img/cancel.png" alt="" srcset="" width="12px" height="12px"></a></div>
-                <div>Datphones</div>
-            </div>
-        
-            <div class="bg_blur" style="background-image: url(../../templates/review2bg.png);">
-                
-            </div>
-        </div>
-        <div class="video1" id="video1">
-            <video controls controlsList="nodownload">
-                <source src="../static/img/review1.mp4">
-            </video>
-            <div class="vid_logo">
-                <div><a href="./index.html#reviews"><img src="../static/img/cancel.png" alt="" srcset="" width="12px" height="12px"></a></div>
-                <div>Datphones</div>
-            </div>
-        
-            <div class="bg_blur" style="background-image: url(../../templates/review1bg.png);">
-                
-            </div>
-        </div>
+    <div id="find_height"></div>
+<div class="videos" id="videos">
+    <div class="video_item" id="video_item">
+        <video controls controlsList="nodownload" src="./review1.mp4" id="video1" onended="videos.scrollBy(0,100)"></video>
     </div>
+    <div class="video_item" id="video_item">
+        <video controls controlsList="nodownload" src="./review2.mp4" id="video"></video>
+    </div>
+    <div class="video_item" id="video_item">
+        <video controls controlsList="nodownload" src="./review1.mp4" id="video"></video>
+    </div>
+</div>
+
     <script>
-        function playPauseVideo() {
+    function playPauseVideo() {
     let videos = document.querySelectorAll("video");
     videos.forEach((video) => {
         // We can only control playback without insteraction if video is mute
@@ -73,10 +44,6 @@
                                 video.paused) {
                                 video.play();
                             }
-                            // else if(video.onended){
-                            //     alert("JOE")
-                            // }
-
                         });
                     },
                     { threshold: 1 }
@@ -86,9 +53,40 @@
         }
     });
 }
-
-// And you would kick this off where appropriate with:
 playPauseVideo();
+
+video_section = document.getElementById('videos')
+// video_items = document.getElementById('video_item')
+video_section.style.backgroundColor = 'red'
+// video_section.style.width = `${100}%`
+let actualHeight = window.innerHeight;
+let elementHeight = document.getElementById('find_height').clientHeight;
+let barHeight = elementHeight - actualHeight;
+use_height= elementHeight - barHeight
+use_height = `${use_height}px`
+
+video_section.style.height = use_height
+
+window.onresize=function(){
+    let actualHeight = window.innerHeight;
+    let elementHeight = document.getElementById('find_height').clientHeight;
+    let barHeight = elementHeight - actualHeight;
+    use_height= elementHeight - barHeight
+    use_height = `${use_height}px`
+    video_section.style.height = use_height
+}
+
+
+
+
+// alert(elementHeight)
+// final_height = 
+// alert(barHeight)
+
+
+
+
+
     </script>
 </body>
 </html>
